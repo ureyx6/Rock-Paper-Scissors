@@ -22,34 +22,26 @@ function getPlayerChoice() {
 function playRound(playerChoice, computerChoice) {
     if (playerChoice == "Rock" && computerChoice == "Paper") {
         computerScore += 1
-        return ["You lose! Paper beats Rock", computerScore];
+        return "You lose! Paper beats Rock";
     } else if (playerChoice == "Paper" && computerChoice == "Rock") {
         playerScore += 1
-        return ["You win! Paper beats Rock", playerScore];
+        return "You win! Paper beats Rock";
     } else if (playerChoice == "Rock" && computerChoice == "Scissors") {
         playerScore += 1
-        return ["You win! Rock beats Scissors", playerScore];
+        return "You win! Rock beats Scissors";
     } else if (playerChoice == "Scissors" && computerChoice == "Rock") {
         computerScore += 1
         return "You lose! Rock beats Scissors";
     } else if (playerChoice == "Paper" && computerChoice == "Scissors") {
         computerScore += 1
-        return ["You lose! Scissors beats Paper", computerScore];
+        return "You lose! Scissors beats Paper";
     } else if (playerChoice == "Scissors" && computerChoice == "Paper") {
         playerScore += 1
-        return ["You win! Scissors beats Paper", playerScore];
+        return "You win! Scissors beats Paper";
     } else if (playerChoice == computerChoice) {
         return "Draw";
     }
 }
-    function gameScore() {
-    } if (playerScore == computerScore) {
-        console.log("Draw!");
-    } else if (playerScore > computerScore) {
-        console.log("You have won!");
-    } else if (playerScore < computerScore) {
-        console.log("You have lost :c.");
-    }
 
 
 function game() {
@@ -58,7 +50,14 @@ function game() {
         let computerChoice = getComputerChoice();
         console.log(playRound(playerChoice, computerChoice));
     }
-    gameScore();
+function scoreCounter() {
+    } if (playerScore == computerScore) {
+        console.log("Draw!");
+    } else if (playerScore > computerScore) {
+        console.log("You have won!");
+    } else if (playerScore < computerScore) {
+        console.log("You have lost :c.");
+    }
 }
 game();
 
