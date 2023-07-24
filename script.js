@@ -11,4 +11,9 @@ if (randomizer == 0) {
     return computerChoice
 }
 }
-console.log(getComputerChoice());
+function getPlayerChoice() {
+let promptAnswer = prompt("Choose Rock, Paper, Or Scissors").toLowerCase();
+let playerChoice = promptAnswer.charAt(0).toUpperCase() + promptAnswer.slice(1);
+return playerChoice;
+}
+console.log(getPlayerChoice());
