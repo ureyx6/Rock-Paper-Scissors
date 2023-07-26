@@ -41,6 +41,10 @@ function playRound(playerChoice, computerChoice) {
         result = "You win! Scissors beats Paper";
     } else if (playerChoice == computerChoice) {
         result = "Draw";
+    } if (computerScore == 5) {
+        result ="You lose! Reload to try again";
+    } if (playerScore ==5) {
+        result ="You win! Reload to try again";
     }
     document.getElementById('display').textContent = result
     document.getElementById('player-score').textContent= playerScore
