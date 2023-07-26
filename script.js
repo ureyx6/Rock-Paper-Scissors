@@ -43,6 +43,8 @@ function playRound(playerChoice, computerChoice) {
         result = "Draw";
     }
     document.getElementById('display').textContent = result
+    document.getElementById('player-score').textContent= playerScore
+    document.getElementById('computer-score').textContent= computerScore
     return
 }
 
